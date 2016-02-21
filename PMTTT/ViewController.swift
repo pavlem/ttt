@@ -11,6 +11,10 @@ import AVFoundation
 
 class ViewController: UIViewController
 {
+    @IBOutlet weak var player1: UITextField!
+    @IBOutlet weak var player2: UITextField!
+    
+    
     @IBOutlet weak var button0: UIButton!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -30,9 +34,26 @@ class ViewController: UIViewController
     var winningCombinations = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]
     var winner = 0
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    
     override func viewDidAppear(animated: Bool) {
         label.center = CGPointMake(label.center.x - 400, label.center.y)
         playAgainButton.alpha = 0
+    }
+    
+    
+    
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     @IBAction func buttonPressed(sender: UIButton) {
@@ -43,16 +64,28 @@ class ViewController: UIViewController
             
             if goNumber % 2 == 0
             {
-                image = UIImage(named: "Triangle.png")!
+//                image = UIImage(named: "o")!
+//                gameState[sender.tag] = 2
+//                let p1 = player1.text! == "" ? "player 1" : player1.text!
+//                PlayerTurnsLabel.text = "It's \(p1) Turn"
                 
-                gameState[sender.tag] = 2
-                PlayerTurnsLabel.text = "It's Circles Turn"
+                
+                image = UIImage(named: "o")!
+                gameState[sender.tag] = 1
+                
+                let p1 = player1.text! == "" ? "player 1" : player1.text!
+
+                PlayerTurnsLabel.text = "It's \(p1) Turn"
             }
             else
             {
-                image = UIImage(named: "circle.png")!
-                gameState[sender.tag] = 1
-                PlayerTurnsLabel.text = "It's Triangles Turn"
+
+                let p2 = player1.text! == "" ? "player 2" : player2.text!
+
+                
+                image = UIImage(named: "x")!
+                gameState[sender.tag] = 2
+                PlayerTurnsLabel.text = "It's \(p2) Turn"
                 
             }
             
@@ -71,12 +104,16 @@ class ViewController: UIViewController
                 
                 if winner == 1
                 {
-                    label.text = "Circle has won!"
+                    let p2 = player1.text! == "" ? "player 2" : player2.text!
+
+                    label.text = "\(p2) has won!"
                     PlayerTurnsLabel.text = ""
                 }
                 else
                 {
-                    label.text = "Triangle has won!"
+                    let p1 = player1.text! == "" ? "player 1" : player1.text!
+
+                    label.text = "\(p1) has won!"
                     PlayerTurnsLabel.text = ""
                 }
                 
