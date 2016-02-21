@@ -7,16 +7,35 @@
 //
 
 import UIKit
+import RealmSwift
+
 
 class StatsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    
-    
+    var myFunds : Results<StatsRealm>!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        
         // Do any additional setup after loading the view.
+        self.myFunds = getStatsFromDB()
+
+        print(self.myFunds.count)
+
+    }
+    
+    func getRealmConfiguration () {
+        let config = Realm.Configuration()
+        Realm.Configuration.defaultConfiguration = config
+    }
+    
+    func getStatsFromDB() -> Results<StatsRealm> {
+        getRealmConfiguration()
+        
+        let results = uiRealm.objects(StatsRealm)
+        return results
     }
     
     private func configureTableView() {
@@ -30,12 +49,16 @@ class StatsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.myFunds.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("StatCellID", forIndexPath: indexPath)
-        cell.textLabel?.text = ""
+        
+        let message = self.myFunds[indexPath.row]
+        cell.textLabel?.text = message.finalMessage
+        cell.textLabel?.font = UIFont(name:"Avenir", size:14)
+        
         return cell
     }
 }
