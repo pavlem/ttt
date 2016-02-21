@@ -139,6 +139,8 @@ class ViewController: UIViewController
 
                     label.text = "\(p1) has won!"
                     PlayerTurnsLabel.text = ""
+                    
+                    inputStatData()
                 }
                 
                 self.label.hidden = false
@@ -158,6 +160,13 @@ class ViewController: UIViewController
                 self.PlayerTurnsLabel.text = ""
             }
         }
+    }
+    
+    
+    func inputStatData() {
+        let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+        print(timestamp)
+        
     }
     
     @IBAction func playAgainButtonPressed(sender: UIButton) {

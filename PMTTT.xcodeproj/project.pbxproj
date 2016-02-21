@@ -14,6 +14,7 @@
 		9E14C04F1C7A020200D7799E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E14C04D1C7A020200D7799E /* LaunchScreen.storyboard */; };
 		9E14C05A1C7A020200D7799E /* PMTTTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E14C0591C7A020200D7799E /* PMTTTTests.swift */; };
 		9E14C0651C7A020200D7799E /* PMTTTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E14C0641C7A020200D7799E /* PMTTTUITests.swift */; };
+		9E14C0751C7A1D3900D7799E /* StatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E14C0741C7A1D3900D7799E /* StatsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9E14C0601C7A020200D7799E /* PMTTTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMTTTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E14C0641C7A020200D7799E /* PMTTTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMTTTUITests.swift; sourceTree = "<group>"; };
 		9E14C0661C7A020200D7799E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E14C0741C7A1D3900D7799E /* StatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				9E14C0441C7A020200D7799E /* AppDelegate.swift */,
 				9E14C0461C7A020200D7799E /* ViewController.swift */,
+				9E14C0741C7A1D3900D7799E /* StatsVC.swift */,
 				9E14C0481C7A020200D7799E /* Main.storyboard */,
 				9E14C04B1C7A020200D7799E /* Assets.xcassets */,
 				9E14C04D1C7A020200D7799E /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				9E14C0471C7A020200D7799E /* ViewController.swift in Sources */,
 				9E14C0451C7A020200D7799E /* AppDelegate.swift in Sources */,
+				9E14C0751C7A1D3900D7799E /* StatsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +488,7 @@
 				9E14C06B1C7A020200D7799E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E14C06C1C7A020200D7799E /* Build configuration list for PBXNativeTarget "PMTTTTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				9E14C06E1C7A020200D7799E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E14C06F1C7A020200D7799E /* Build configuration list for PBXNativeTarget "PMTTTUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				9E14C0711C7A020200D7799E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
