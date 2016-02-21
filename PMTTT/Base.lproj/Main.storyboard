@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="board" translatesAutoresizingMaskIntoConstraints="NO" id="aPn-5w-5XE">
-                                <rect key="frame" x="144" y="148" width="313" height="336"/>
+                                <rect key="frame" x="144" y="132" width="313" height="336"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="313" id="YVx-Lw-pZZ"/>
                                     <constraint firstAttribute="height" constant="336" id="pdg-Hk-N5s"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbt-Wl-DQJ">
-                                <rect key="frame" x="205" y="81" width="190" height="57"/>
+                                <rect key="frame" x="205" y="65" width="190" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="190" id="9xc-rp-hKV"/>
                                     <constraint firstAttribute="height" constant="57" id="fe8-zl-a5i"/>
@@ -38,8 +38,8 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="fe8-zl-a5i"/>
                                         <exclude reference="9xc-rp-hKV"/>
+                                        <exclude reference="fe8-zl-a5i"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -56,7 +56,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ek-bE-1Fa" userLabel="Button 0">
-                                <rect key="frame" x="151" y="167" width="80" height="80"/>
+                                <rect key="frame" x="151" y="151" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="L2T-Qb-6rr"/>
                                     <constraint firstAttribute="height" constant="80" id="vFf-pr-u5x"/>
@@ -70,7 +70,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeF-pu-unD" userLabel="Button 1">
-                                <rect key="frame" x="260" y="167" width="80" height="80"/>
+                                <rect key="frame" x="260" y="151" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="NgQ-e5-d1P"/>
                                     <constraint firstAttribute="height" constant="80" id="pef-zh-mAT"/>
@@ -84,7 +84,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfi-YO-gdD" userLabel="Button 2">
-                                <rect key="frame" x="369" y="167" width="80" height="80"/>
+                                <rect key="frame" x="369" y="151" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="9Az-qM-7BY"/>
                                     <constraint firstAttribute="width" constant="80" id="hc6-hE-1be"/>
@@ -98,7 +98,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYV-xC-xoe" userLabel="Button 3">
-                                <rect key="frame" x="156" y="274" width="80" height="80"/>
+                                <rect key="frame" x="156" y="258" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="46w-uF-nDT"/>
                                     <constraint firstAttribute="height" constant="80" id="G58-GX-EBH"/>
@@ -112,7 +112,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnf-Tp-2qm" userLabel="Button 4">
-                                <rect key="frame" x="263" y="274" width="80" height="80"/>
+                                <rect key="frame" x="263" y="258" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="GgX-Fm-AaF"/>
                                     <constraint firstAttribute="height" constant="80" id="oO0-cZ-0GM"/>
@@ -126,7 +126,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knM-qj-Qk0" userLabel="Button 5">
-                                <rect key="frame" x="369" y="274" width="80" height="80"/>
+                                <rect key="frame" x="369" y="258" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="IfI-2v-00Y"/>
                                     <constraint firstAttribute="width" constant="80" id="OdD-1A-Kq9"/>
@@ -140,7 +140,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOE-jj-qnW" userLabel="Button 7">
-                                <rect key="frame" x="260" y="391" width="80" height="80"/>
+                                <rect key="frame" x="260" y="375" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="kkk-Qm-HQw"/>
                                     <constraint firstAttribute="height" constant="80" id="yzv-5N-YiT"/>
@@ -154,7 +154,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K12-z4-iVr" userLabel="Button 8">
-                                <rect key="frame" x="369" y="391" width="80" height="80"/>
+                                <rect key="frame" x="369" y="375" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="H7d-uq-EgJ"/>
                                     <constraint firstAttribute="width" constant="80" id="PGQ-a3-SGj"/>
@@ -174,7 +174,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irC-Ut-HBB" userLabel="Button 6">
-                                <rect key="frame" x="151" y="391" width="80" height="80"/>
+                                <rect key="frame" x="151" y="375" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="7Cd-BT-M4L"/>
                                     <constraint firstAttribute="height" constant="80" id="QUf-aU-n6z"/>
@@ -233,15 +233,16 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="6Fe-Lj-wYS"/>
-                                <exclude reference="4de-5g-Vvf"/>
                                 <exclude reference="YFe-bm-qxz"/>
+                                <exclude reference="4de-5g-Vvf"/>
+                                <exclude reference="6Fe-Lj-wYS"/>
                                 <exclude reference="DeV-os-6gZ"/>
                                 <exclude reference="TcP-IJ-1xW"/>
+                                <exclude reference="503-8q-aA6"/>
                                 <exclude reference="QRK-yc-r25"/>
                                 <exclude reference="cLl-0U-Bkh"/>
-                                <exclude reference="503-8q-aA6"/>
                                 <exclude reference="485-oW-O4P"/>
+                                <exclude reference="Y0S-Ml-dJI"/>
                             </mask>
                         </variation>
                     </view>
