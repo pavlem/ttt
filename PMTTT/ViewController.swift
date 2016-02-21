@@ -11,9 +11,9 @@ import AVFoundation
 
 class ViewController: UIViewController
 {
+    // MARK: - Properties
     @IBOutlet weak var player1: UITextField!
     @IBOutlet weak var player2: UITextField!
-    
     
     @IBOutlet weak var button0: UIButton!
     @IBOutlet weak var button1: UIButton!
@@ -35,12 +35,16 @@ class ViewController: UIViewController
     var winner = 0
     
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"keyboardWillAppear:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"keyboardWillDisappear:", name: UIKeyboardWillHideNotification, object: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -48,9 +52,33 @@ class ViewController: UIViewController
         playAgainButton.alpha = 0
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
     
     
+    func keyboardWillAppear(notification: NSNotification){
+        
+        enableBoardFields(false)
+    }
     
+    func keyboardWillDisappear(notification: NSNotification){
+
+        enableBoardFields(true)
+
+    }
+    
+    private func enableBoardFields(shouldEnable: Bool) {
+            button0.enabled = shouldEnable; button1.enabled = shouldEnable; button2.enabled = shouldEnable;
+            button3.enabled = shouldEnable; button4.enabled = shouldEnable; button5.enabled = shouldEnable;
+            button6.enabled = shouldEnable; button7.enabled = shouldEnable; button8.enabled = shouldEnable;
+    }
+    
+    
+
+    
+    //MARK: - private
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
@@ -64,10 +92,6 @@ class ViewController: UIViewController
             
             if goNumber % 2 == 0
             {
-//                image = UIImage(named: "o")!
-//                gameState[sender.tag] = 2
-//                let p1 = player1.text! == "" ? "player 1" : player1.text!
-//                PlayerTurnsLabel.text = "It's \(p1) Turn"
                 
                 
                 image = UIImage(named: "o")!
@@ -75,7 +99,7 @@ class ViewController: UIViewController
                 
                 let p1 = player1.text! == "" ? "player 1" : player1.text!
 
-                PlayerTurnsLabel.text = "It's \(p1) Turn"
+                PlayerTurnsLabel.text = "It's \(p1)'s Turn"
             }
             else
             {
@@ -85,7 +109,7 @@ class ViewController: UIViewController
                 
                 image = UIImage(named: "x")!
                 gameState[sender.tag] = 2
-                PlayerTurnsLabel.text = "It's \(p2) Turn"
+                PlayerTurnsLabel.text = "It's \(p2)'s Turn"
                 
             }
             
@@ -153,7 +177,6 @@ class ViewController: UIViewController
         button6.setImage(nil, forState: UIControlState.Normal)
         button7.setImage(nil, forState: UIControlState.Normal)
         button8.setImage(nil, forState: UIControlState.Normal)
-        
     }
 }
 
