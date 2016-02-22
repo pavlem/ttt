@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--GameVC-->
         <scene sceneID="Ixx-lD-cFr">
             <objects>
-                <viewController id="GTI-Bh-e0t" customClass="ViewController" customModule="PMTTT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GTI-Bh-e0t" customClass="GameVC" customModule="PMTTT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RKt-nw-svq"/>
                         <viewControllerLayoutGuide type="bottom" id="dr5-JG-vag"/>
@@ -313,7 +313,7 @@
             </objects>
             <point key="canvasLocation" x="1258" y="411"/>
         </scene>
-        <!--StatsVC-->
+        <!--Stats-->
         <scene sceneID="Ts4-8C-bm2">
             <objects>
                 <viewController id="gyW-S5-Sro" customClass="StatsVC" customModule="PMTTT" customModuleProvider="target" sceneMemberID="viewController">
@@ -348,6 +348,14 @@
                             <constraint firstItem="rJW-av-IIZ" firstAttribute="top" secondItem="I5b-kH-9uY" secondAttribute="bottom" constant="-64" id="knj-Ha-veG"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Stats" id="bbN-yP-8C8">
+                        <barButtonItem key="rightBarButtonItem" title="Clear" id="7b6-L8-azz">
+                            <connections>
+                                <action selector="clearStats:" destination="gyW-S5-Sro" id="4pm-Wa-Bvj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="rJW-av-IIZ" id="cKv-AD-saw"/>
                     </connections>

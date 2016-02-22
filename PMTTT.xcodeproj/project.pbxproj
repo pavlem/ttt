@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9E14C0451C7A020200D7799E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E14C0441C7A020200D7799E /* AppDelegate.swift */; };
-		9E14C0471C7A020200D7799E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E14C0461C7A020200D7799E /* ViewController.swift */; };
 		9E14C04A1C7A020200D7799E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E14C0481C7A020200D7799E /* Main.storyboard */; };
 		9E14C04C1C7A020200D7799E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E14C04B1C7A020200D7799E /* Assets.xcassets */; };
 		9E14C04F1C7A020200D7799E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E14C04D1C7A020200D7799E /* LaunchScreen.storyboard */; };
@@ -21,6 +20,7 @@
 		9E14C07B1C7A21AC00D7799E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E14C0771C7A21AC00D7799E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9EFD9D7E1C7A252300F8E627 /* StatsRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFD9D7D1C7A252300F8E627 /* StatsRealm.swift */; };
 		9EFD9D801C7A25CF00F8E627 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFD9D7F1C7A25CF00F8E627 /* DBHandler.swift */; };
+		9EFD9D821C7AFB1300F8E627 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFD9D811C7AFB1300F8E627 /* GameVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,6 @@
 /* Begin PBXFileReference section */
 		9E14C0411C7A020200D7799E /* PMTTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PMTTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E14C0441C7A020200D7799E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E14C0461C7A020200D7799E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E14C0491C7A020200D7799E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E14C04B1C7A020200D7799E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E14C04E1C7A020200D7799E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		9E14C0771C7A21AC00D7799E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		9EFD9D7D1C7A252300F8E627 /* StatsRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatsRealm.swift; path = ../StatsRealm.swift; sourceTree = "<group>"; };
 		9EFD9D7F1C7A25CF00F8E627 /* DBHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
+		9EFD9D811C7AFB1300F8E627 /* GameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +130,8 @@
 			children = (
 				9EFD9D7D1C7A252300F8E627 /* StatsRealm.swift */,
 				9E14C0441C7A020200D7799E /* AppDelegate.swift */,
-				9E14C0461C7A020200D7799E /* ViewController.swift */,
 				9E14C0741C7A1D3900D7799E /* StatsVC.swift */,
+				9EFD9D811C7AFB1300F8E627 /* GameVC.swift */,
 				9EFD9D7F1C7A25CF00F8E627 /* DBHandler.swift */,
 				9E14C0481C7A020200D7799E /* Main.storyboard */,
 				9E14C04B1C7A020200D7799E /* Assets.xcassets */,
@@ -292,10 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E14C0471C7A020200D7799E /* ViewController.swift in Sources */,
 				9EFD9D801C7A25CF00F8E627 /* DBHandler.swift in Sources */,
 				9E14C0451C7A020200D7799E /* AppDelegate.swift in Sources */,
 				9E14C0751C7A1D3900D7799E /* StatsVC.swift in Sources */,
+				9EFD9D821C7AFB1300F8E627 /* GameVC.swift in Sources */,
 				9EFD9D7E1C7A252300F8E627 /* StatsRealm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  GameVC.swift
 //  PMTTT
 //
-//  Created by Pavle Mijatovic on 2/21/16.
+//  Created by Pavle Mijatovic on 2/22/16.
 //  Copyright © 2016 Pavle Mijatovic. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import RealmSwift
 
-class ViewController: UIViewController
+class GameVC: UIViewController
 {
     // MARK: - Properties
     @IBOutlet weak var player1: UITextField!
@@ -54,7 +54,7 @@ class ViewController: UIViewController
     
     override func viewDidAppear(animated: Bool) {
         label.center = CGPointMake(label.center.x - 400, label.center.y)
-//        playAgainButton.alpha = 0
+        //        playAgainButton.alpha = 0
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -69,15 +69,15 @@ class ViewController: UIViewController
     }
     
     func keyboardWillDisappear(notification: NSNotification){
-
+        
         enableBoardFields(true)
-
+        
     }
     
     private func enableBoardFields(shouldEnable: Bool) {
-            button0.enabled = shouldEnable; button1.enabled = shouldEnable; button2.enabled = shouldEnable;
-            button3.enabled = shouldEnable; button4.enabled = shouldEnable; button5.enabled = shouldEnable;
-            button6.enabled = shouldEnable; button7.enabled = shouldEnable; button8.enabled = shouldEnable;
+        button0.enabled = shouldEnable; button1.enabled = shouldEnable; button2.enabled = shouldEnable;
+        button3.enabled = shouldEnable; button4.enabled = shouldEnable; button5.enabled = shouldEnable;
+        button6.enabled = shouldEnable; button7.enabled = shouldEnable; button8.enabled = shouldEnable;
     }
     
     //MARK: - private
@@ -100,14 +100,14 @@ class ViewController: UIViewController
                 gameState[sender.tag] = 1
                 
                 let p1 = player1.text! == "" ? "player 1" : player1.text!
-
+                
                 PlayerTurnsLabel.text = "It's \(p1)'s Turn"
             }
             else
             {
-
+                
                 let p2 = player1.text! == "" ? "player 2" : player2.text!
-
+                
                 
                 image = UIImage(named: "x")!
                 gameState[sender.tag] = 2
@@ -131,21 +131,21 @@ class ViewController: UIViewController
                 if winner == 1
                 {
                     let p2 = player1.text! == "" ? "player 2" : player2.text!
-
+                    
                     label.text = "\(p2) has won!"
                     self.isItATie = false
-
+                    
                     PlayerTurnsLabel.text = ""
                     
                     self.didPlayerOneWin = false
-
+                    
                     inputStatData()
-
+                    
                 }
                 else
                 {
                     let p1 = player1.text! == "" ? "player 1" : player1.text!
-
+                    
                     label.text = "\(p1) has won!"
                     self.didPlayerOneWin = true
                     self.isItATie = false
@@ -156,7 +156,7 @@ class ViewController: UIViewController
                 
                 self.label.hidden = false
                 self.playAgainButton.hidden = false
-
+                
             }
             
             goNumber++
@@ -170,13 +170,13 @@ class ViewController: UIViewController
                 self.label.hidden = false
                 self.label.center = CGPointMake(self.label.center.x + 400, self.label.center.y)
                 self.playAgainButton.hidden = false
-
+                
                 self.PlayerTurnsLabel.text = ""
                 
                 isItATie = true
                 didPlayerOneWin = false
                 inputStatData()
-
+                
             }
         }
     }
@@ -201,7 +201,7 @@ class ViewController: UIViewController
             
             finalStatMessage = "on the \(timestamp), \(winnerName) won"
         }
-
+        
         
         let statsObject = StatsRealm()
         
@@ -209,10 +209,10 @@ class ViewController: UIViewController
         statsObject.player2 = player2.text!
         statsObject.date = timestamp
         statsObject.finalMessage = finalStatMessage
-
+        
         addStatsToDB(statsObject)
-
-
+        
+        
         
     }
     
@@ -222,9 +222,9 @@ class ViewController: UIViewController
         winner = 0
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         label.hidden = true
-//        playAgainButton.alpha = 0
+        //        playAgainButton.alpha = 0
         self.playAgainButton.hidden = true
-
+        
         
         button0.setImage(nil, forState: UIControlState.Normal)
         button1.setImage(nil, forState: UIControlState.Normal)
@@ -236,16 +236,15 @@ class ViewController: UIViewController
         button7.setImage(nil, forState: UIControlState.Normal)
         button8.setImage(nil, forState: UIControlState.Normal)
     }
-
+    
     
     // MARK: Realm DB
     func addStatsToDB(stats: StatsRealm) {
-
+        
         let realm = try! Realm()
-
+        
         try! realm.write {
             realm.add(stats)
         }
     }
 }
-

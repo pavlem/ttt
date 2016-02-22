@@ -15,14 +15,25 @@ class StatsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     var myFunds : Results<StatsRealm>!
 
+    
+    @IBAction func clearStats(sender: AnyObject) {
+        let uiRealm = try! Realm()
+        
+        try! uiRealm.write {
+            uiRealm.deleteAll()
+        }
+        
+        tableView.reloadData()
+    }
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
         
         // Do any additional setup after loading the view.
         self.myFunds = getStatsFromDB()
-
-        print(self.myFunds.count)
 
     }
     
@@ -61,4 +72,5 @@ class StatsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
 }
