@@ -69,8 +69,8 @@
 		9E14C0641C7A020200D7799E /* PMTTTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMTTTUITests.swift; sourceTree = "<group>"; };
 		9E14C0661C7A020200D7799E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E14C0741C7A1D3900D7799E /* StatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
-		9E14C0761C7A21AC00D7799E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		9E14C0771C7A21AC00D7799E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		9E14C0761C7A21AC00D7799E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = ../Realm.framework; sourceTree = "<group>"; };
+		9E14C0771C7A21AC00D7799E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = ../RealmSwift.framework; sourceTree = "<group>"; };
 		9EFD9D7D1C7A252300F8E627 /* StatsRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatsRealm.swift; path = ../StatsRealm.swift; sourceTree = "<group>"; };
 		9EFD9D7F1C7A25CF00F8E627 /* DBHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 		9EFD9D811C7AFB1300F8E627 /* GameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
@@ -106,8 +106,6 @@
 		9E14C0381C7A020200D7799E = {
 			isa = PBXGroup;
 			children = (
-				9E14C0761C7A21AC00D7799E /* Realm.framework */,
-				9E14C0771C7A21AC00D7799E /* RealmSwift.framework */,
 				9E14C0431C7A020200D7799E /* PMTTT */,
 				9E14C0581C7A020200D7799E /* PMTTTTests */,
 				9E14C0631C7A020200D7799E /* PMTTTUITests */,
@@ -158,6 +156,8 @@
 		9EFD9D831C7B12E400F8E627 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9E14C0761C7A21AC00D7799E /* Realm.framework */,
+				9E14C0771C7A21AC00D7799E /* RealmSwift.framework */,
 				9E14C0441C7A020200D7799E /* AppDelegate.swift */,
 				9E14C0501C7A020200D7799E /* Info.plist */,
 				9E14C0481C7A020200D7799E /* Main.storyboard */,
