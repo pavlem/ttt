@@ -48,7 +48,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button hidden="YES" opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pF9-A6-q6c" userLabel="New Game">
+                            <button hidden="YES" opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pF9-A6-q6c" userLabel="Reset Game">
                                 <rect key="frame" x="20" y="546" width="46" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,160 +60,6 @@
                                     <action selector="playAgainButtonPressed:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="dgI-ZT-cI6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ek-bE-1Fa" userLabel="Button 0">
-                                <rect key="frame" x="151" y="190" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="L2T-Qb-6rr"/>
-                                    <constraint firstAttribute="height" constant="80" id="vFf-pr-u5x"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="QWM-ST-O2q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeF-pu-unD" userLabel="Button 1">
-                                <rect key="frame" x="260" y="190" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="NgQ-e5-d1P"/>
-                                    <constraint firstAttribute="height" constant="80" id="pef-zh-mAT"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="yVT-PA-8tL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfi-YO-gdD" userLabel="Button 2">
-                                <rect key="frame" x="369" y="190" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="9Az-qM-7BY"/>
-                                    <constraint firstAttribute="width" constant="80" id="hc6-hE-1be"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="Zlw-pb-qs8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYV-xC-xoe" userLabel="Button 3">
-                                <rect key="frame" x="156" y="297" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="46w-uF-nDT"/>
-                                    <constraint firstAttribute="height" constant="80" id="G58-GX-EBH"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="5oy-Ab-8K8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnf-Tp-2qm" userLabel="Button 4">
-                                <rect key="frame" x="263" y="297" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="GgX-Fm-AaF"/>
-                                    <constraint firstAttribute="height" constant="80" id="oO0-cZ-0GM"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="ztk-Q6-Hga"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knM-qj-Qk0" userLabel="Button 5">
-                                <rect key="frame" x="369" y="297" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="IfI-2v-00Y"/>
-                                    <constraint firstAttribute="width" constant="80" id="OdD-1A-Kq9"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="lQ0-9r-S8P"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOE-jj-qnW" userLabel="Button 7">
-                                <rect key="frame" x="260" y="414" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="kkk-Qm-HQw"/>
-                                    <constraint firstAttribute="height" constant="80" id="yzv-5N-YiT"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="cD3-E4-xZd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K12-z4-iVr" userLabel="Button 8">
-                                <rect key="frame" x="369" y="414" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="H7d-uq-EgJ"/>
-                                    <constraint firstAttribute="width" constant="80" id="PGQ-a3-SGj"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="eqv-cG-OGh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irC-Ut-HBB" userLabel="Button 6">
-                                <rect key="frame" x="151" y="414" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="7Cd-BT-M4L"/>
-                                    <constraint firstAttribute="height" constant="80" id="QUf-aU-n6z"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.1960784314" green="0.23137254900000001" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="tjI-Y0-O5R"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uap-t9-J6k">
-                                <rect key="frame" x="56" y="49" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player X" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fmY-mb-oT6">
-                                <rect key="frame" x="20" y="48" width="71" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player O" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VxB-HG-TNu">
-                                <rect key="frame" x="507" y="48" width="73" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="O" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffa-Qz-kUJ">
-                                <rect key="frame" x="486" y="52" width="13" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqL-5b-rgY">
-                                <rect key="frame" x="99" y="52" width="12" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wR-Xj-cQ5">
                                 <rect key="frame" x="538" y="546" width="42" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -224,6 +70,154 @@
                                     <segue destination="gyW-S5-Sro" kind="show" id="FHp-bo-vcd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ek-bE-1Fa" userLabel="11">
+                                <rect key="frame" x="151" y="190" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="L2T-Qb-6rr"/>
+                                    <constraint firstAttribute="height" constant="80" id="vFf-pr-u5x"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAction:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="er4-Y3-3VS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeF-pu-unD" userLabel="12">
+                                <rect key="frame" x="260" y="190" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="NgQ-e5-d1P"/>
+                                    <constraint firstAttribute="height" constant="80" id="pef-zh-mAT"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAction:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="ddK-Qy-bGz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfi-YO-gdD" userLabel="13">
+                                <rect key="frame" x="369" y="190" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="9Az-qM-7BY"/>
+                                    <constraint firstAttribute="width" constant="80" id="hc6-hE-1be"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAction:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="7Sc-U6-vd8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYV-xC-xoe" userLabel="21">
+                                <rect key="frame" x="156" y="297" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="46w-uF-nDT"/>
+                                    <constraint firstAttribute="height" constant="80" id="G58-GX-EBH"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAction:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="yeS-Lm-WVV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnf-Tp-2qm" userLabel="22">
+                                <rect key="frame" x="263" y="297" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="GgX-Fm-AaF"/>
+                                    <constraint firstAttribute="height" constant="80" id="oO0-cZ-0GM"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAction:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="atU-kW-pEa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knM-qj-Qk0" userLabel="23">
+                                <rect key="frame" x="369" y="297" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="IfI-2v-00Y"/>
+                                    <constraint firstAttribute="width" constant="80" id="OdD-1A-Kq9"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAction:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="rbb-nv-tND"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOE-jj-qnW" userLabel="31">
+                                <rect key="frame" x="260" y="414" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="kkk-Qm-HQw"/>
+                                    <constraint firstAttribute="height" constant="80" id="yzv-5N-YiT"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAction:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="sbI-Fc-cDp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K12-z4-iVr" userLabel="32">
+                                <rect key="frame" x="369" y="414" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="H7d-uq-EgJ"/>
+                                    <constraint firstAttribute="width" constant="80" id="PGQ-a3-SGj"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAction:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="Eb8-22-pKo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irC-Ut-HBB" userLabel="33">
+                                <rect key="frame" x="151" y="414" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="7Cd-BT-M4L"/>
+                                    <constraint firstAttribute="height" constant="80" id="QUf-aU-n6z"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.1960784314" green="0.23137254900000001" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAction:" destination="GTI-Bh-e0t" eventType="touchUpInside" id="ReI-GN-Ssx"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player X" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fmY-mb-oT6">
+                                <rect key="frame" x="20" y="48" width="74" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player O" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VxB-HG-TNu">
+                                <rect key="frame" x="504" y="48" width="76" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffa-Qz-kUJ">
+                                <rect key="frame" x="483" y="52" width="13" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqL-5b-rgY">
+                                <rect key="frame" x="102" y="52" width="12" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -296,20 +290,20 @@
                     <navigationItem key="navigationItem" id="Aje-Y2-bvr"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="PlayerTurnsLabel" destination="oRv-jo-Ofl" id="OUi-TK-G86"/>
-                        <outlet property="button0" destination="4ek-bE-1Fa" id="MA7-yl-fqX"/>
-                        <outlet property="button1" destination="DeF-pu-unD" id="HQB-dR-MXv"/>
-                        <outlet property="button2" destination="Rfi-YO-gdD" id="OmB-uN-Abm"/>
-                        <outlet property="button3" destination="XYV-xC-xoe" id="cX6-Ap-2gW"/>
-                        <outlet property="button4" destination="tnf-Tp-2qm" id="m0z-Xj-Z5J"/>
-                        <outlet property="button5" destination="knM-qj-Qk0" id="Ruy-dR-iWf"/>
-                        <outlet property="button6" destination="irC-Ut-HBB" id="vOO-aL-gAf"/>
-                        <outlet property="button7" destination="JOE-jj-qnW" id="Gdz-CJ-XW7"/>
-                        <outlet property="button8" destination="K12-z4-iVr" id="cQh-Wz-Yuo"/>
-                        <outlet property="label" destination="rbt-Wl-DQJ" id="MEM-qO-F1Y"/>
+                        <outlet property="b11" destination="4ek-bE-1Fa" id="dBt-b2-EIl"/>
+                        <outlet property="b12" destination="DeF-pu-unD" id="4rm-Db-FGj"/>
+                        <outlet property="b13" destination="Rfi-YO-gdD" id="XRR-7f-4Wf"/>
+                        <outlet property="b21" destination="XYV-xC-xoe" id="hc7-H9-3bK"/>
+                        <outlet property="b22" destination="tnf-Tp-2qm" id="rgl-nQ-4HV"/>
+                        <outlet property="b23" destination="knM-qj-Qk0" id="P3W-3m-ePY"/>
+                        <outlet property="b31" destination="JOE-jj-qnW" id="S4r-Cj-1AV"/>
+                        <outlet property="b32" destination="K12-z4-iVr" id="KUM-RM-EhX"/>
+                        <outlet property="b33" destination="irC-Ut-HBB" id="a6F-Uh-fTi"/>
+                        <outlet property="generalInfo" destination="rbt-Wl-DQJ" id="B9K-hK-JCv"/>
                         <outlet property="playAgainButton" destination="pF9-A6-q6c" id="hOh-lX-8C3"/>
                         <outlet property="player1" destination="fmY-mb-oT6" id="jFm-Gw-uZW"/>
                         <outlet property="player2" destination="VxB-HG-TNu" id="awp-dg-VuE"/>
+                        <outlet property="playerInfo" destination="oRv-jo-Ofl" id="1cV-Vv-4Mv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2XI-3d-sWr" sceneMemberID="firstResponder"/>

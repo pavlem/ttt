@@ -16,18 +16,18 @@ class GameVC: UIViewController
     @IBOutlet weak var player1: UITextField!
     @IBOutlet weak var player2: UITextField!
     
-    @IBOutlet weak var button0: UIButton!
-    @IBOutlet weak var button1: UIButton!
-    @IBOutlet weak var button2: UIButton!
-    @IBOutlet weak var button3: UIButton!
-    @IBOutlet weak var button4: UIButton!
-    @IBOutlet weak var button5: UIButton!
-    @IBOutlet weak var button6: UIButton!
-    @IBOutlet weak var button7: UIButton!
-    @IBOutlet weak var button8: UIButton!
+    @IBOutlet weak var b11: UIButton!
+    @IBOutlet weak var b12: UIButton!
+    @IBOutlet weak var b13: UIButton!
+    @IBOutlet weak var b21: UIButton!
+    @IBOutlet weak var b22: UIButton!
+    @IBOutlet weak var b23: UIButton!
+    @IBOutlet weak var b31: UIButton!
+    @IBOutlet weak var b32: UIButton!
+    @IBOutlet weak var b33: UIButton!
     
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var PlayerTurnsLabel: UILabel!
+    @IBOutlet weak var generalInfo: UILabel!
+    @IBOutlet weak var playerInfo: UILabel!
     @IBOutlet weak var playAgainButton: UIButton!
     
     
@@ -62,11 +62,11 @@ class GameVC: UIViewController
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.hidden = true
         
-        label.hidden = false
+        generalInfo.hidden = false
     }
     
     override func viewDidAppear(animated: Bool) {
-        label.center = CGPointMake(label.center.x - 400, label.center.y)
+        generalInfo.center = CGPointMake(generalInfo.center.x - 400, generalInfo.center.y)
         //        playAgainButton.alpha = 0
     }
     
@@ -88,9 +88,9 @@ class GameVC: UIViewController
     }
     
     private func enableBoardFields(shouldEnable: Bool) {
-        button0.enabled = shouldEnable; button1.enabled = shouldEnable; button2.enabled = shouldEnable;
-        button3.enabled = shouldEnable; button4.enabled = shouldEnable; button5.enabled = shouldEnable;
-        button6.enabled = shouldEnable; button7.enabled = shouldEnable; button8.enabled = shouldEnable;
+        b11.enabled = shouldEnable; b12.enabled = shouldEnable; b13.enabled = shouldEnable;
+        b21.enabled = shouldEnable; b22.enabled = shouldEnable; b23.enabled = shouldEnable;
+        b31.enabled = shouldEnable; b32.enabled = shouldEnable; b33.enabled = shouldEnable;
     }
     
     //MARK: - private
@@ -99,9 +99,9 @@ class GameVC: UIViewController
         view.endEditing(true)
     }
     
-    @IBAction func buttonPressed(sender: UIButton) {
+    @IBAction func playAction(sender: UIButton) {
         
-        label.text = ""
+        generalInfo.text = ""
         
         if gameState[sender.tag] == 0 && winner == 0
         {
@@ -116,7 +116,7 @@ class GameVC: UIViewController
                 
                 let p1 = player1.text! == "" ? playerX : player1.text!
                 
-                PlayerTurnsLabel.text = "It's \(p1)'s Turn"
+                playerInfo.text = "It's \(p1)'s Turn"
             }
             else
             {
@@ -126,7 +126,7 @@ class GameVC: UIViewController
                 
                 image = UIImage(named: "x")!
                 gameState[sender.tag] = 2
-                PlayerTurnsLabel.text = "It's \(p2)'s Turn"
+                playerInfo.text = "It's \(p2)'s Turn"
                 
             }
             
@@ -147,10 +147,10 @@ class GameVC: UIViewController
                 {
                     let p2 = player1.text! == "" ? playerO : player2.text!
                     
-                    label.text = "\(p2) has won!"
+                    generalInfo.text = "\(p2) has won!"
                     self.isItATie = false
                     
-                    PlayerTurnsLabel.text = ""
+                    playerInfo.text = ""
                     
                     self.didPlayerOneWin = false
                     
@@ -161,15 +161,15 @@ class GameVC: UIViewController
                 {
                     let p1 = player1.text! == "" ? playerX : player1.text!
                     
-                    label.text = "\(p1) has won!"
+                    generalInfo.text = "\(p1) has won!"
                     self.didPlayerOneWin = true
                     self.isItATie = false
-                    PlayerTurnsLabel.text = ""
+                    playerInfo.text = ""
                     
                     inputStatData()
                 }
                 
-                self.label.hidden = false
+                self.generalInfo.hidden = false
                 self.playAgainButton.hidden = false
                 
             }
@@ -179,14 +179,14 @@ class GameVC: UIViewController
             
             if goNumber == 10 && winner == 0
             {
-                label.text = noWinnerMessage
+                generalInfo.text = noWinnerMessage
                 
                 self.isItATie = true
-                self.label.hidden = false
-                self.label.center = CGPointMake(self.label.center.x + 400, self.label.center.y)
+                self.generalInfo.hidden = false
+                self.generalInfo.center = CGPointMake(self.generalInfo.center.x + 400, self.generalInfo.center.y)
                 self.playAgainButton.hidden = false
                 
-                self.PlayerTurnsLabel.text = ""
+                self.playerInfo.text = ""
                 
                 isItATie = true
                 didPlayerOneWin = false
@@ -195,7 +195,6 @@ class GameVC: UIViewController
             }
         }
     }
-    
     
     func inputStatData() {
         let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
@@ -240,10 +239,10 @@ class GameVC: UIViewController
         goNumber = 1
         winner = 0
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-        label.text = startingMessage
+        generalInfo.text = startingMessage
         
         self.playAgainButton.hidden = true
         
-        button0.setImage(nil, forState: UIControlState.Normal); button1.setImage(nil, forState: UIControlState.Normal); button2.setImage(nil, forState: UIControlState.Normal); button3.setImage(nil, forState: UIControlState.Normal); button4.setImage(nil, forState: UIControlState.Normal); button5.setImage(nil, forState: UIControlState.Normal); button6.setImage(nil, forState: UIControlState.Normal); button7.setImage(nil, forState: UIControlState.Normal); button8.setImage(nil, forState: UIControlState.Normal)
+        b11.setImage(nil, forState: UIControlState.Normal); b12.setImage(nil, forState: UIControlState.Normal); b13.setImage(nil, forState: UIControlState.Normal); b21.setImage(nil, forState: UIControlState.Normal); b22.setImage(nil, forState: UIControlState.Normal); b23.setImage(nil, forState: UIControlState.Normal); b31.setImage(nil, forState: UIControlState.Normal); b32.setImage(nil, forState: UIControlState.Normal); b33.setImage(nil, forState: UIControlState.Normal)
     }
 }
