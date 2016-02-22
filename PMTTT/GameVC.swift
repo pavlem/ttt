@@ -27,7 +27,6 @@ class GameVC: UIViewController
     @IBOutlet weak var b33: UIButton!
     
     @IBOutlet weak var generalInfo: UILabel!
-    @IBOutlet weak var playerInfo: UILabel!
     @IBOutlet weak var playAgainButton: UIButton!
     
     var didPlayerOneWin = false
@@ -78,8 +77,6 @@ class GameVC: UIViewController
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
-    
-    
     
     
     // MARK: - Private
@@ -142,8 +139,6 @@ class GameVC: UIViewController
     // MARK: - Actions
     @IBAction func playAction(sender: UIButton) {
         
-        generalInfo.text = ""
-        
         if game[sender.tag] == 0 && winn == 0 {
             var image = UIImage()
             
@@ -151,12 +146,12 @@ class GameVC: UIViewController
                 image = UIImage(named: "o")!
                 game[sender.tag] = 1
                 let p1 = player1.text! == "" ? playerX : player1.text!
-                playerInfo.text = "It's \(p1)'s Turn"
+                generalInfo.text = "It's \(p1)'s Turn"
             } else {
                 let p2 = player1.text! == "" ? playerO : player2.text!
                 image = UIImage(named: "x")!
                 game[sender.tag] = 2
-                playerInfo.text = "It's \(p2)'s Turn"
+                generalInfo.text = "It's \(p2)'s Turn"
             }
             
             for combination in gameWinCombo {
@@ -170,7 +165,6 @@ class GameVC: UIViewController
                     let p2 = player1.text! == "" ? playerO : player2.text!
                     generalInfo.text = "\(p2) has won!"
                     self.isItATie = false
-                    playerInfo.text = ""
                     self.didPlayerOneWin = false
                     saveStatData()
                 } else {
@@ -178,12 +172,9 @@ class GameVC: UIViewController
                     generalInfo.text = "\(p1) has won!"
                     self.didPlayerOneWin = true
                     self.isItATie = false
-                    playerInfo.text = ""
-                    
                     saveStatData()
                 }
                 
-                self.generalInfo.hidden = false
                 self.playAgainButton.hidden = false
             }
             
@@ -194,11 +185,7 @@ class GameVC: UIViewController
                 generalInfo.text = noWinnerMessage
                 
                 self.isItATie = true
-                self.generalInfo.hidden = false
-//                self.generalInfo.center = CGPointMake(self.generalInfo.center.x + 400, self.generalInfo.center.y)
                 self.playAgainButton.hidden = false
-                
-                self.playerInfo.text = ""
                 
                 isItATie = true
                 didPlayerOneWin = false
@@ -208,9 +195,7 @@ class GameVC: UIViewController
     }
     
     @IBAction func playAgainButtonPressed(sender: UIButton) {
-        goNum = 1
-        winn = 0
-        game = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        game = [0, 0, 0, 0, 0, 0, 0, 0, 0]; goNum = 1; winn = 0
         generalInfo.text = startingMessage
         
         self.playAgainButton.hidden = true
