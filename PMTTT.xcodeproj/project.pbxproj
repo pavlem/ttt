@@ -128,10 +128,10 @@
 		9E14C0431C7A020200D7799E /* PMTTT */ = {
 			isa = PBXGroup;
 			children = (
-				9EFD9D7D1C7A252300F8E627 /* StatsRealm.swift */,
 				9E14C0441C7A020200D7799E /* AppDelegate.swift */,
 				9E14C0741C7A1D3900D7799E /* StatsVC.swift */,
 				9EFD9D811C7AFB1300F8E627 /* GameVC.swift */,
+				9EFD9D7D1C7A252300F8E627 /* StatsRealm.swift */,
 				9EFD9D7F1C7A25CF00F8E627 /* DBHandler.swift */,
 				9E14C0481C7A020200D7799E /* Main.storyboard */,
 				9E14C04B1C7A020200D7799E /* Assets.xcassets */,

@@ -44,12 +44,21 @@ class GameVC: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"keyboardWillAppear:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"keyboardWillDisappear:", name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.hidden = true
+        
+        label.hidden = false
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -87,6 +96,8 @@ class GameVC: UIViewController
     }
     
     @IBAction func buttonPressed(sender: UIButton) {
+        
+        label.text = ""
         
         if gameState[sender.tag] == 0 && winner == 0
         {
@@ -221,7 +232,10 @@ class GameVC: UIViewController
         goNumber = 1
         winner = 0
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-        label.hidden = true
+//        label.hidden = true
+        label.text = "X starts first"
+
+        
         self.playAgainButton.hidden = true
         
         

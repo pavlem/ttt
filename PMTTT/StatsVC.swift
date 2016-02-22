@@ -33,6 +33,11 @@ class StatsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.hidden = false
+    }
+    
     private func configureTableView() {
         // Table view itself
         tableView.delegate = self
