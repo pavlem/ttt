@@ -10,13 +10,8 @@ import Foundation
 import RealmSwift
 
 class StatsRealm: Object {
-    
-    
     dynamic var player1 = ""
     dynamic var player2 = ""
     dynamic var date = ""
-    
     dynamic var finalMessage = ""
-
-
 }

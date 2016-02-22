@@ -128,15 +128,11 @@
 		9E14C0431C7A020200D7799E /* PMTTT */ = {
 			isa = PBXGroup;
 			children = (
-				9E14C0441C7A020200D7799E /* AppDelegate.swift */,
+				9EFD9D831C7B12E400F8E627 /* Supporting Files */,
 				9E14C0741C7A1D3900D7799E /* StatsVC.swift */,
 				9EFD9D811C7AFB1300F8E627 /* GameVC.swift */,
 				9EFD9D7D1C7A252300F8E627 /* StatsRealm.swift */,
 				9EFD9D7F1C7A25CF00F8E627 /* DBHandler.swift */,
-				9E14C0481C7A020200D7799E /* Main.storyboard */,
-				9E14C04B1C7A020200D7799E /* Assets.xcassets */,
-				9E14C04D1C7A020200D7799E /* LaunchScreen.storyboard */,
-				9E14C0501C7A020200D7799E /* Info.plist */,
 			);
 			path = PMTTT;
 			sourceTree = "<group>";
@@ -157,6 +153,18 @@
 				9E14C0661C7A020200D7799E /* Info.plist */,
 			);
 			path = PMTTTUITests;
+			sourceTree = "<group>";
+		};
+		9EFD9D831C7B12E400F8E627 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9E14C0441C7A020200D7799E /* AppDelegate.swift */,
+				9E14C0501C7A020200D7799E /* Info.plist */,
+				9E14C0481C7A020200D7799E /* Main.storyboard */,
+				9E14C04B1C7A020200D7799E /* Assets.xcassets */,
+				9E14C04D1C7A020200D7799E /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

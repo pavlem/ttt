@@ -212,7 +212,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.7686274509803922" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="VxB-HG-TNu" secondAttribute="trailing" id="3GL-t0-Kvw"/>
                             <constraint firstItem="JOE-jj-qnW" firstAttribute="leading" secondItem="irC-Ut-HBB" secondAttribute="trailing" constant="29" id="485-oW-O4P"/>
@@ -313,7 +313,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rJW-av-IIZ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.80816724409999996" blue="0.52342062300000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StatCellID" id="8Ci-n9-AqM">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
@@ -321,12 +321,13 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Ci-n9-AqM" id="q2A-Jw-dAu">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" red="1" green="0.80816724409999996" blue="0.52342062300000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.80816724409999996" blue="0.52342062300000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="rJW-av-IIZ" secondAttribute="trailing" constant="-20" id="GFg-Xm-Xuq"/>
                             <constraint firstItem="rJW-av-IIZ" firstAttribute="leading" secondItem="XLz-07-Ln3" secondAttribute="leadingMargin" constant="-20" id="XaM-j3-qPt"/>
