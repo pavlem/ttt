@@ -210,10 +210,10 @@ class GameVC: UIViewController
         statsObject.date = timestamp
         statsObject.finalMessage = finalStatMessage
         
-        addStatsToDB(statsObject)
         
-        
-        
+        let dbHandler = DBHandler()
+        dbHandler.addStatsToDB(statsObject)
+
     }
     
     @IBAction func playAgainButtonPressed(sender: UIButton) {
@@ -222,7 +222,6 @@ class GameVC: UIViewController
         winner = 0
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         label.hidden = true
-        //        playAgainButton.alpha = 0
         self.playAgainButton.hidden = true
         
         
@@ -235,16 +234,5 @@ class GameVC: UIViewController
         button6.setImage(nil, forState: UIControlState.Normal)
         button7.setImage(nil, forState: UIControlState.Normal)
         button8.setImage(nil, forState: UIControlState.Normal)
-    }
-    
-    
-    // MARK: Realm DB
-    func addStatsToDB(stats: StatsRealm) {
-        
-        let realm = try! Realm()
-        
-        try! realm.write {
-            realm.add(stats)
-        }
     }
 }

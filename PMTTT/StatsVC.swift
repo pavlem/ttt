@@ -17,12 +17,7 @@ class StatsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
     @IBAction func clearStats(sender: AnyObject) {
-        let uiRealm = try! Realm()
-        
-        try! uiRealm.write {
-            uiRealm.deleteAll()
-        }
-        
+        DBHandler().clearAllData()
         tableView.reloadData()
     }
     
@@ -33,21 +28,10 @@ class StatsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         configureTableView()
         
         // Do any additional setup after loading the view.
-        self.myFunds = getStatsFromDB()
+        self.myFunds = DBHandler().getStatsFromDB()
 
     }
     
-    func getRealmConfiguration () {
-        let config = Realm.Configuration()
-        Realm.Configuration.defaultConfiguration = config
-    }
-    
-    func getStatsFromDB() -> Results<StatsRealm> {
-        getRealmConfiguration()
-        
-        let results = uiRealm.objects(StatsRealm)
-        return results
-    }
     
     private func configureTableView() {
         // Table view itself
@@ -73,4 +57,8 @@ class StatsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
 }

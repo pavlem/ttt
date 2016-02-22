@@ -30,6 +30,16 @@ class DBHandler {
     }
     
     // MARK: Write
+    
+    func clearAllData(){
+        let uiRealm = try! Realm()
+        
+        try! uiRealm.write {
+            uiRealm.deleteAll()
+        }
+
+    }
+    
     func addStatsToDB(stats: StatsRealm) {
         add(stats)
     }
