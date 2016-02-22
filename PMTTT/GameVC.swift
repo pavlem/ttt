@@ -39,7 +39,11 @@ class GameVC: UIViewController
     var winningCombinations = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]
     var winner = 0
     
-    
+    let playerX = "Player X"
+    let playerO = "Player O"
+    let tieMessage = "it was a tie"
+    let noWinnerMessage = "No winner!"
+    let startingMessage = "X starts first"
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,14 +114,14 @@ class GameVC: UIViewController
                 image = UIImage(named: "o")!
                 gameState[sender.tag] = 1
                 
-                let p1 = player1.text! == "" ? "player 1" : player1.text!
+                let p1 = player1.text! == "" ? playerX : player1.text!
                 
                 PlayerTurnsLabel.text = "It's \(p1)'s Turn"
             }
             else
             {
                 
-                let p2 = player1.text! == "" ? "player 2" : player2.text!
+                let p2 = player1.text! == "" ? playerO : player2.text!
                 
                 
                 image = UIImage(named: "x")!
@@ -141,7 +145,7 @@ class GameVC: UIViewController
                 
                 if winner == 1
                 {
-                    let p2 = player1.text! == "" ? "player 2" : player2.text!
+                    let p2 = player1.text! == "" ? playerO : player2.text!
                     
                     label.text = "\(p2) has won!"
                     self.isItATie = false
@@ -155,7 +159,7 @@ class GameVC: UIViewController
                 }
                 else
                 {
-                    let p1 = player1.text! == "" ? "player 1" : player1.text!
+                    let p1 = player1.text! == "" ? playerX : player1.text!
                     
                     label.text = "\(p1) has won!"
                     self.didPlayerOneWin = true
@@ -175,7 +179,7 @@ class GameVC: UIViewController
             
             if goNumber == 10 && winner == 0
             {
-                label.text = "No winner!"
+                label.text = noWinnerMessage
                 
                 self.isItATie = true
                 self.label.hidden = false
@@ -198,16 +202,20 @@ class GameVC: UIViewController
         
         var finalStatMessage = ""
         var winnerName = ""
-        let tieMessage = "it was a tie"
         
         
         if isItATie {
             finalStatMessage = "on the \(timestamp), \(tieMessage)"
         } else {
             if didPlayerOneWin {
-                winnerName = player1.text!
+                
+                let p1 = player1.text! == "" ? playerX : player1.text!
+                
+                winnerName = p1
             } else {
-                winnerName = player2.text!
+                let p2 = player1.text! == "" ? playerO : player2.text!
+
+                winnerName = p2
             }
             
             finalStatMessage = "on the \(timestamp), \(winnerName) won"
@@ -232,21 +240,10 @@ class GameVC: UIViewController
         goNumber = 1
         winner = 0
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-//        label.hidden = true
-        label.text = "X starts first"
-
+        label.text = startingMessage
         
         self.playAgainButton.hidden = true
         
-        
-        button0.setImage(nil, forState: UIControlState.Normal)
-        button1.setImage(nil, forState: UIControlState.Normal)
-        button2.setImage(nil, forState: UIControlState.Normal)
-        button3.setImage(nil, forState: UIControlState.Normal)
-        button4.setImage(nil, forState: UIControlState.Normal)
-        button5.setImage(nil, forState: UIControlState.Normal)
-        button6.setImage(nil, forState: UIControlState.Normal)
-        button7.setImage(nil, forState: UIControlState.Normal)
-        button8.setImage(nil, forState: UIControlState.Normal)
+        button0.setImage(nil, forState: UIControlState.Normal); button1.setImage(nil, forState: UIControlState.Normal); button2.setImage(nil, forState: UIControlState.Normal); button3.setImage(nil, forState: UIControlState.Normal); button4.setImage(nil, forState: UIControlState.Normal); button5.setImage(nil, forState: UIControlState.Normal); button6.setImage(nil, forState: UIControlState.Normal); button7.setImage(nil, forState: UIControlState.Normal); button8.setImage(nil, forState: UIControlState.Normal)
     }
 }
